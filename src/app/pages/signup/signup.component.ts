@@ -1,5 +1,7 @@
 import { JsonPipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../../services/user.service';
+
 
 @Component({
   selector: 'app-signup',
@@ -16,7 +18,7 @@ public user={
   phone:'',
 };
 
-  constructor() { }
+  constructor(private userService:UserService) { }
 
   ngOnInit(): void {
   }
@@ -27,6 +29,20 @@ public user={
       alert('Username is required!');
       return;
     }
-    console.log(this.user);
+
+    //calls addUser() method from userservice
+    this.userService.addUser(this.user).subscribe(
+      (data)=>{
+        //for success
+        console.log(data);
+        alert("Registration successful!");
+      },
+      (error)=>{
+        //for Error
+        console.log(error);
+        alert("Something went wrong!");
+      }
+    );
+
   }
 }
