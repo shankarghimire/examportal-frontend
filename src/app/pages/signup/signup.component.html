@@ -1,1 +1,49 @@
-<p>signup works!</p>
+<div class="container">
+  <div class="row mt-3">
+    <div class="col-md-6 offset-md-3">
+      <div class="container text-center">
+        <img src="../../../assets/logo.png" alt="">
+      </div>
+      <h1 class="text-center">Register Here!</h1>
+      <!-- {{user | json}} -->
+      <form>
+        <!-- Username -->
+        <mat-form-field appearance="outline" class="full-length">
+          <mat-label>Username</mat-label>
+          <input matInput placeholder="Enter here">
+        </mat-form-field>
+        <!-- Password -->
+        <mat-form-field appearance="outline" class="full-length">
+          <mat-label>Password</mat-label>
+          <input type="password" matInput placeholder="Enter here">
+        </mat-form-field>
+        <!-- First Name -->
+        <mat-form-field appearance="outline" class="full-length">
+          <mat-label>First Name</mat-label>
+          <input matInput placeholder="Enter here">
+        </mat-form-field>
+        <!-- Last Name -->
+        <mat-form-field appearance="outline" class="full-length">
+          <mat-label>Last Name</mat-label>
+          <input matInput placeholder="Enter here">
+        </mat-form-field>
+        <!-- Email -->
+        <mat-form-field appearance="outline" class="full-length">
+          <mat-label>Email</mat-label>
+          <input type="email" matInput placeholder="Enter here">
+        </mat-form-field>
+        <!-- Phone -->
+        <mat-form-field appearance="outline" class="full-length">
+          <mat-label>Phone Number</mat-label>
+          <input type="number" matInput placeholder="Enter here">
+        </mat-form-field>
+
+        <div class="container text-center">
+          <button mat-raised-button color="primary">Register</button>
+          <button mat-raised-button color="primary" class="ms-2" style="width: 90px;">Reset</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
